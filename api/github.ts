@@ -2,8 +2,6 @@ import { VercelRequest, VercelResponse } from "@vercel/node";
 import { bot } from "./index";
 
 export default async (req: VercelRequest, res: VercelResponse) => {
-    const { secret } = req.query;
-
     try {
         const event = req.headers["x-github-event"];
 
