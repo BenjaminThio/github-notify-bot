@@ -4,10 +4,6 @@ import { bot } from "./index";
 export default async (req: VercelRequest, res: VercelResponse) => {
     const { secret } = req.query;
 
-    if (secret !== process.env.MY_SECRET_KEY) {
-        return res.status(401).send("Unauthorized");
-    }
-
     try {
         const event = req.headers["x-github-event"];
 
